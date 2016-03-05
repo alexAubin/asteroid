@@ -1,0 +1,31 @@
+
+
+Dependencies : libsdl1.2-dev libsdl-image1.2-dev libsdl-ttf2.0-dev
+
+La commande de compilation-execution du programme est :
+
+	gcc `sdl-config --cflags --libs` -lSDL_image -lSDL_ttf -lm -o asteroide asteroide.c && ./asteroide
+
+N.B : Le programme est optimisé pour Linux
+N.B 2 : La compilation du programme requiert les librairies SDL, SDL-image, et SDL-ttf
+N.B 3 : La modification des paramètres et des conditions initiales du problème s'effectue à partir du fichier constantes.c. Il n'est pas nécessaire de manipuler le fichier asteroide.c
+
+
+
+A propos de l'utilisation du programme :
+
+	Any key     - met le programme en pause lorsque la simulation tourne
+
+	Lorsque le programme est en pause :
+	
+	Enter       - lance la simulation
+	Echap       - quitte le programme
+	ClickGauche - définit la position de l'astéroïde
+	ClickDroit  - définit le vecteur vitesse de l'astéroïde
+ 	C (clear)   - redéfinit le vecteur position-vitesse avec les conditions initiales telles qu'elles ont été définies dans constantes.c à la compilation
+	S (save)    - sauvegarde le vecteur position-vitesse actuelle
+	R (reload)  - charge le dernier vecteur position-vitesse sauvegardé
+		
+	
+
+
